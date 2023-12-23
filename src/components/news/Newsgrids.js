@@ -11,7 +11,7 @@ const NewsGrid = () => {
   useEffect(() => {
     const fetchLatestNews = async () => {
       try {
-        const response = await axios.get("/news/latest");
+        const response = await axios.get("https://final-project-group-o.cyclic.app/news/latest");
         if (response.data && Array.isArray(response.data.news)) {
           setLatestNewsData(response.data.news);
         } else {
@@ -30,7 +30,7 @@ const NewsGrid = () => {
 
     const fetchAllNews = async () => {
       try {
-        const response = await axios.get("/news");
+        const response = await axios.get("https://final-project-group-o.cyclic.app/news");
         if (response.data && Array.isArray(response.data.news)) {
           setAllNewsData(response.data.news);
         } else {
